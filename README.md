@@ -1,3 +1,3 @@
 # Resume
 
-[](main.pdf)
+![My Resume](main.pdf)
