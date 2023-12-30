@@ -1,4 +1,4 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -25,7 +25,6 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
 
 \raggedbottom
@@ -34,7 +33,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\Large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -74,7 +73,7 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -87,7 +86,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://dinhdat.com/}{\Large Vo Dinh Dat}} & Email : \href{mailto:vodinhdat03@gmail.com}{vodinhdat03@gmail.com}\\
+  \textbf{\href{http://dinhdat.com/}{\LARGE Vo Dinh Dat}} & Email : \href{mailto:vodinhdat03@gmail.com}{vodinhdat03@gmail.com}\\
   \href{http://dinhdat.com/}{http://www.dinhdat.com} & Mobile : \href{tel:+84399565203}{+84-399-565-203} \\
 \end{tabular*}
 
@@ -97,7 +96,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Ha Noi University of Science and Technology}{Ha Noi, Viet Nam}
-      {Bachelor of Data Science and Artificial Intelligience (DS-AI)}{Aug. 2021 -- Now}
+      {BSc in Data Science and Artificial Intelligience (DS-AI)}{Aug. 2021 -- Now}
     \resumeSubheading
       {Phan Boi Chau Gifted High School}{Nghe An, Viet Nam}
       {Specialization in Mathematic;  GPA: 3.64 (9.1/10.0)}{Aug. 2018 -- July. 2021}
@@ -109,7 +108,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Freelance}{Taiwan}
-      {AI and Quantitative Researcher}{Sep 2023 -- Now}
+      {AI and Quantitative Researcher}{Sep 2023 -- Dec 2023}
       \resumeItemListStart
         \resumeItem{Reinforcement Learning Agent for Trading}
           {Developing an Agent with capable of navigating the volatility within the trading environment, surpass the performance of ensemble models.}
@@ -118,7 +117,7 @@
 
     \resumeSubheading
       {VIS Laboratory}{Ha Noi, Viet Nam}
-      {Machine Learning Researcher}{May 2022 -- Jul 2023}
+      {Part Time Machine Learning Researcher}{May 2022 -- Jul 2023}
       \resumeItemListStart
         \resumeItem{Agent for Multiplayer Game}
           {Research and Develope Reinforcement Learning algorithms based on current SOTA such as PPO, Transformer, successfully surpass 95\% of the envs in the System.}
@@ -139,31 +138,39 @@
   \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
+  
+
+\section{Technical Skills}
  \resumeSubHeadingListStart
-   \item{
-     \textbf{Proficient}{: Python, Pytorch, Lightning, Git, Docker}
-   }
-   \item{
-     \textbf{Familiar}{: Javascript, HTML, Java, C++, MongoDB, AzureML}
-   }
+  \item{\textbf{Languages}: {Python, Javascript, Java, C++}}\\[-\baselineskip]
+  \item{\textbf{Framework}: {Pytorch, OpenCV, Huggingface, Scikit Learn, Polars, FastAPI, Flask}}\\[-\baselineskip]
+  \item{\textbf{Developer Tools}: {Git, Github, Docker, Bash, Linux, Postman, AzureML, AWS}}\\[-\baselineskip]
+  \item{\textbf{Research Topics}: {Transformer-Based Model, Large Language Model, Policy Gradient Model}}\\[-\baselineskip]
  \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Personal Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{Vietnamese OCR}
-      {OCR model for Vietnamese's handwritten digit using Transformer, achiece 4\% CER (Character Error Rate) in the test dataset.}
-    \resumeSubItem{Personal Blog}
-      {My Personal Blog about AI, Machine Learning and Landing Page for my information and my resume.}
+      {OCR model for Vietnamese's handwritten text using Transformer, achieve 4\% CER (Character Error Rate) in the test dataset. \textbf{Tools:} Python, Pytorch, Lightning, OpenCV, Docker}
+    \resumeSubItem{Personal Website}
+      {My personal blog about AI, Machine Learning and landing page for personal information and resume. \textbf{Tools:} Javascript, HTML, CSS}
     \resumeSubItem{PPO Transformer}
-      {A Reinforcement Learning Project using PPO and Transformer for multiplayer game, successfully surpass other algorithms in the system.}
+      {A Reinforcement Learning project using PPO and Transformer for multiplayer game, successfully surpass other algorithms in the system. \textbf{Tools:} Python, Pytorch}
       \resumeSubItem{Piano Generation}
-      {Generate classical piano in MIDI format using generative model like Transformer, GPT2.}
+      {Generate classical piano in MIDI format using generative model such as Transformer, GPT2,... \textbf{Tools:} Python, Lightning, Huggingface}
       \resumeSubItem{Laptop Price Prediction}
-      {An end to end data science project about laptop price prediction, crawling, analyzing and modelling to gain insight about current laptop market.}
+      {An end to end data science project about laptop price prediction, crawling, analyzing and modelling to gain insight about current laptop market. \textbf{Tools:} MongoDB, Selenium, Polars, Seaborn, Scikit-Learn}
+      \resumeSubItem{Physic Simulation}
+      {An interactive simulation designed to demonstrate Newton's laws of motion, written in Java and JavaFX. \textbf{Tools:} Java, JavaFX, Scene-builder}
   \resumeSubHeadingListEnd
 
-%-------------------------------------------
+  %-----------LANGUAGES-----------------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \item{\textbf{Vietnamese}: Native language.}\\[-\baselineskip]
+    \item{\textbf{English}: Full professional proficiency.}\\[-\baselineskip]
+  \resumeSubHeadingListEnd
+%--------------------------------------
 \end{document}
