@@ -34,7 +34,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\Large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -44,6 +44,12 @@
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeitem}[1]{
+  \item\small{
+    #1 \vspace{-2pt}
   }
 }
 
@@ -58,20 +64,28 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \textit{#2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
+\newcommand{\resumeSubheadingNew}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textbar{} \textit{\small#2} &  \textit{\small#3}\\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[1]{
+    \hspace{0.2em}
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+      \textbf{#1}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemii}{\textbullet}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -85,11 +99,19 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://dinhdat.com/}{\LARGE Vo Dinh Dat}} & Email : \href{mailto:vodinhdat03@gmail.com}{vodinhdat03@gmail.com}\\
-  \href{http://dinhdat.com/}{http://www.dinhdat.com} & Mobile : \href{tel:+84399565203}{+84-399-565-203} \\
-\end{tabular*}
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://dinhdat.com/}{\LARGE Vo Dinh Dat}} & Email : \href{mailto:vodinhdat03@gmail.com}{vodinhdat03@gmail.com}\\
+%   \href{https://dinhdat.com/}{www.dinhdat.com} & Mobile : \href{tel:+84399565203}{+84-399-565-203} \\
+%   & \href{https://www.linkedin.com/in/datvodinh/}{{LinkedIn: linkedin.com/in/datvodinh/}}
+% \end{tabular*}
 
+\begin{center}
+  \textbf{\LARGE {VO DINH DAT}} \\ \vspace{1pt}
+  \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{www.dinhdat.com}}
+  $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}} $|$ 
+  \href{https://www.linkedin.com/in/datvodinh/}{{linkedin.com/in/datvodinh/}}
+  
+\end{center}
 %-----------SUMMARY-----------------
 % \section{Summary}
 % An ambitious junior with a year of experience in research and 
@@ -98,12 +120,22 @@
 \section{Educations}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Ha Noi University of Science and Technology}{Ha Noi, Viet Nam}
-      {BSc in Data Science and Artificial Intelligience (DS-AI)}{Aug. 2021 -- Now}
-    \resumeSubheading
-      {Phan Boi Chau Gifted High School}{Nghe An, Viet Nam}
-      {Specialization in Mathematic;  GPA: 3.64 (9.1/10.0)}{Aug. 2018 -- July. 2021}
+      {Ha Noi University of Science and Technology}{\textit{Ha Noi, Viet Nam}}
+      {BSc in Data Science and Artificial Intelligience (DS-AI)}{Aug 2021 -- Aug 2025 (Expected)}
+    % \resumeSubheading
+    %   {Phan Boi Chau Gifted High School}{Nghe An, Viet Nam}
+    %   {Specialization in Mathematic;  GPA: 3.64 (9.1/10.0)}{Aug. 2018 -- July. 2021}
   \resumeSubHeadingListEnd
+
+  %--------PROGRAMMING SKILLS------------
+  
+\section{Technical Skills}
+\resumeItemListStart[leftmargin=*,label={}]
+  \resumeitem{\textbf{Programming Languages}: {Python, Java, C++, Javascript, HTML/CSS.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Machine Learning}: {Pytorch, Lightning, OpenCV, Huggingface, Scikit-Learn, Pandas, Numpy.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Backend and Cloud}: {MySQL, MongoDB, FastAPI, Django, AzureML, AWS.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Developer Tools}: {Git/Github, Docker, Shell, Linux, Postman.}}\\[-\baselineskip]
+\resumeItemListEnd
 
 
 %-----------EXPERIENCE-----------------
@@ -113,69 +145,57 @@
       {Freelance}{Taiwan}
       {AI and Quantitative Researcher}{Sep 2023 -- Dec 2023}
       \resumeItemListStart
-        \resumeItem{Reinforcement Learning Agent for Trading}
-          {Developing an Agent with capable of navigating the volatility within the trading environment, surpass the performance of ensemble models.}
+        \resumeitem{Design and improve the reward function for a reinforcement learning-based trading environment to mimic real-world trading scenarios.}
+        \resumeitem{Developing an agent with capable of navigating the volatility within the trading environment, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
       \resumeItemListEnd
       
 
     \resumeSubheading
-      {VIS Laboratory}{Ha Noi, Viet Nam}
-      {Part Time Machine Learning Researcher}{May 2022 -- Jul 2023}
+      {VIS Laboratory (Startup)}{Ha Noi, Viet Nam}
+      {Part Time AI Engineer}{May 2022 -- Jul 2023}
       \resumeItemListStart
-        \resumeItem{Agent for Multiplayer Game}
-          {Research and Develope Reinforcement Learning algorithms based on current SOTA such as PPO, Transformer, successfully surpass 95\% of the envs in the System.}
-        \resumeItem{Multiplayer Game Envs}
-          {Developed 3 Gym's based multiplayer envs  for the purpose of researching algorithms.}
-        \resumeItem{Japanese Stock Market}
-          {Research about Japanese stock market, ensure the credibility of sources and gather data by utilizing web crawling techniques.}
+        \resumeitem{Researched and implemented reinforcement learning algorithms based on current SOTA such as PPO, Transformer, successfully surpass 95\% of the environments in the system by competing with other decision-making agents.}
+        \resumeitem{Developed 3 gym-based multiplayer environments  for the purpose of researching algorithms.}
+        \resumeitem{Research about Japanese stock market, ensure the credibility of sources and gather data by utilizing web crawling techniques.}
       \resumeItemListEnd
-      
-    \resumeSubheading
-      {Ha Noi University of Science and Technology}{Ha Noi, Viet Nam}
-      {Data Science Laboratory}{Dec 2022 -- Apr 2023}
-      \resumeItemListStart
-        \resumeItem{Machine Learning Research}
-          {Learn and Research about fundamental challenges in Machine Learning.}
-      \resumeItemListEnd
-
   \resumeSubHeadingListEnd
-
-%--------PROGRAMMING SKILLS------------
-  
-
-\section{Technical Skills}
- \resumeSubHeadingListStart
-  \item{\textbf{Languages}: {Python, Javascript, Java, C++}}\\[-\baselineskip]
-  \item{\textbf{Frameworks}: {Pytorch, OpenCV, Huggingface, Scikit Learn, Polars, FastAPI, Flask}}\\[-\baselineskip]
-  \item{\textbf{Developer Tools}: {Git, Github, Docker, Bash, Linux, Postman, AzureML, AWS}}\\[-\baselineskip]
-  \item{\textbf{Research Topics}: {Transformer-Based Model, Large Language Model, Policy Gradient Model}}\\[-\baselineskip]
- \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------------
 \section{Personal Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Diffusion Model}
-      {Implement Diffusion Model from Scratch with some famous dataset such as CelebA and Cifar10. \textbf{Tool}: Python, Pytorch, Lightning, Gradio}
-    \resumeSubItem{Vietnamese OCR}
-      {OCR model for Vietnamese's handwritten text using Transformer, achieve 4\% CER (Character Error Rate) in the test dataset. \textbf{Tools:} Python, Pytorch, Lightning, OpenCV, Docker}
-    \resumeSubItem{Personal Website}
-      {My personal blog about AI, Machine Learning and landing page for personal information and resume. \textbf{Tools:} Javascript, HTML, CSS}
-    \resumeSubItem{PPO Transformer}
-      {A Reinforcement Learning project using PPO and Transformer for multiplayer game, successfully surpass other algorithms in the system. \textbf{Tools:} Python, Pytorch}
-      \resumeSubItem{Piano Generation}
-      {Generate classical piano in MIDI format using generative model such as Transformer, GPT2,... \textbf{Tools:} Python, Lightning, Huggingface}
-      \resumeSubItem{Laptop Price Prediction}
-      {An end to end data science project about laptop price prediction, crawling, analyzing and modelling to gain insight about current laptop market. \textbf{Tools:} MongoDB, Selenium, Polars, Seaborn, Scikit-Learn}
-      \resumeSubItem{Physic Simulation}
-      {An interactive simulation designed to demonstrate Newton's laws of motion, written in Java and JavaFX. \textbf{Tools:} Java, JavaFX, Scene-builder}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheadingNew
+    {AI Experiment System}{Pytorch, Lightning, Gradio, FastAPI, MongoDB, Gradio}{Mar 2024}
+    \resumeItemListStart
+      \resumeitem{A web interface enabling users to adjust hyperparameters for the deep learning task and initiate multiple jobs with a single click.}
+      \resumeitem{Real-time display of job progress, presentation of results from completed jobs, sortable by predefined metrics such as accuracy, F1 score and runtime for easy comparison.}
+    \resumeItemListEnd
+  \resumeSubheadingNew
+    {Stable Diffusion from Scratch}{Pytorch, Lightning, WandB, Gradio}{Feb 2024}
+    \resumeItemListStart
+      \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose, training and tracking experiment using Pytorch Lightning and Wandb.}
+      \resumeitem{Build a simple website to visualize the inference of the diffusion model.}
+    \resumeItemListEnd
+    \resumeSubheadingNew
+    {Vietnamese Handwritten OCR}{Pytorch, Lightning, OpenCV, Docker,WandB, Streamlit}{Aug 2023}
+    
+    \resumeItemListStart
+      \resumeitem{Implemented optical character recognition model for Vietnamese's handwritten text using encoder-decoder structure such as Transformer, LSTM,.., achieve 4\% Character Error Rate in the test dataset.}
+      \resumeitem{Build a simple website to visualize the inference of the OCR model.}
+    \resumeItemListEnd
+  \resumeSubheadingNew
+    {Personal Website}{Javascript, HTML, CSS, Jekyll}{Jun 2023 -- Now}
+    \resumeItemListStart
+      \resumeitem{My personal blog to share my knowledge about AI, Machine Learning, showing step by step approach the model and implemented it from scratch.}
+      \resumeitem{A landing page contain my contact information and my resume.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-  %-----------LANGUAGES-----------------
-\section{Languages}
-  \resumeSubHeadingListStart
-    \item{\textbf{Vietnamese}: Native language.}\\[-\baselineskip]
-    \item{\textbf{English}: Full professional proficiency.}\\[-\baselineskip]
-  \resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------------
+% \section{Languages}
+%   \resumeSubHeadingListStart
+%     \item{\textbf{Vietnamese}: Native language.}\\[-\baselineskip]
+%     \item{\textbf{English}: Full professional proficiency.}\\[-\baselineskip]
+%   \resumeSubHeadingListEnd
 %--------------------------------------
 \end{document}
