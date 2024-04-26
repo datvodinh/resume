@@ -91,6 +91,8 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}[leftmargin=*,label=-]}
+\newcommand{\resumeSubItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,7 +108,7 @@
 % \end{tabular*}
 
 \begin{center}
-  \textbf{\LARGE {VO DINH DAT}} \\ \vspace{1pt}
+  \textbf{\LARGE {Vo Dinh Dat}} \\ \vspace{1pt}
   \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{www.dinhdat.com}}
   $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}} $|$ 
   \href{https://www.linkedin.com/in/datvodinh/}{{linkedin.com/in/datvodinh/}}
@@ -131,10 +133,10 @@
   
 \section{Technical Skills}
 \resumeItemListStart[leftmargin=*,label={}]
-  \resumeitem{\textbf{Programming Languages}: {Python, Java, C++, Javascript, HTML/CSS.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Machine Learning}: {Pytorch, Lightning, OpenCV, Huggingface, Scikit-Learn, Pandas, Numpy.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Backend and Cloud}: {MySQL, MongoDB, FastAPI, Django, AzureML, AWS.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Developer Tools}: {Git/Github, Docker, Shell, Linux, Postman.}}\\[-\baselineskip]
+  \resumeitem{\textbf{Programming Languages}: {Python, Java, C++, Javascript.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Deep Learning Frameworks}: {Pytorch, Lightning, OpenCV, Transformers, Unsloth, Ollama, LlamaIndex.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Backend and Cloud}: {MySQL, MongoDB, ChromaDB, FastAPI, Django, AzureML.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Developer Tools}: {Git/Github, Docker, Shell, Linux, Postman, Figma, Jira.}}\\[-\baselineskip]
 \resumeItemListEnd
 
 
@@ -143,7 +145,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Freelance}{Taiwan}
-      {AI and Quantitative Researcher}{Sep 2023 -- Dec 2023}
+      {AI and Quantitative Researcher}{Oct 2023 -- Jan 2024}
       \resumeItemListStart
         \resumeitem{Design and improve the reward function for a reinforcement learning-based trading environment to mimic real-world trading scenarios.}
         \resumeitem{Developing an agent with capable of navigating the volatility within the trading environment, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
@@ -161,39 +163,50 @@
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\section{Personal Projects}
+\section{Projects}
 \resumeSubHeadingListStart
+  
+\resumeSubheadingNew
+    {LLM Finetuning}{Transformers, Unsloth, PEFT, Trl}{Apr 2024}
+    \resumeItemListStart
+      \resumeitem{Finetune open sources LLM model such as Llama-3, Mistral to perform multiple task such as:}
+      \resumeSubItemListStart
+      \resumeitem{Function calling: enable LLM to use external functions and tools.}
+      \resumeitem{Instruction following: generate detail answers based on the given instruction.}
+      \resumeItemListEnd
+    \resumeSubItemListEnd
+
   \resumeSubheadingNew
     {RAG Chatbot}{Ollama, LlamaIndex, ChromaDB, Gradio, Docker}{Mar 2024}
     \resumeItemListStart
       \resumeitem{Build a RAG (Retrieval Augmented Generation) Chatbot that can retrieve information from multiple documents based on user queries and providing precise answers.}
       \resumeitem{Design a simple web interface so users can customize LLM models and input documents.}
+      
     \resumeItemListEnd
+
   \resumeSubheadingNew
     {AI Experiment System}{Pytorch, Lightning, Gradio, FastAPI, MongoDB, Gradio}{Mar 2024}
     \resumeItemListStart
       \resumeitem{A web interface enabling users to adjust hyperparameters for the deep learning task and initiate multiple jobs with a single click.}
       \resumeitem{Real-time display of job progress, presentation of results from completed jobs, sortable by predefined metrics such as accuracy, F1 score and runtime for easy comparison.}
     \resumeItemListEnd
+
   \resumeSubheadingNew
     {Stable Diffusion from Scratch}{Pytorch, Lightning, WandB, Gradio}{Feb 2024}
     \resumeItemListStart
       \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose, training and tracking experiment using Pytorch Lightning and Wandb.}
       \resumeitem{Build a simple website to visualize the inference of the diffusion model.}
     \resumeItemListEnd
-    \resumeSubheadingNew
-    {Vietnamese Handwritten OCR}{Pytorch, Lightning, OpenCV, Docker,WandB, Streamlit}{Aug 2023}
-    
-    \resumeItemListStart
-      \resumeitem{Implemented optical character recognition model for Vietnamese's handwritten text using encoder-decoder structure such as Transformer, LSTM,.., achieve 4\% Character Error Rate in the test dataset.}
-      \resumeitem{Build a simple website to visualize the inference of the OCR model.}
-    \resumeItemListEnd
+
   \resumeSubheadingNew
     {Personal Website}{Javascript, HTML, CSS, Jekyll}{Jun 2023 -- Now}
     \resumeItemListStart
       \resumeitem{My personal blog to share my knowledge about AI, Machine Learning, showing step by step approach the model and implemented it from scratch.}
       \resumeitem{A landing page contain my contact information and my resume.}
     \resumeItemListEnd
+
+  
+
 \resumeSubHeadingListEnd
 
 
