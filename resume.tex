@@ -91,7 +91,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeSubItemListStart}{\begin{itemize}[leftmargin=*,label=-]}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -111,7 +111,7 @@
   \textbf{\LARGE {Vo Dinh Dat}} \\ \vspace{1pt}
   \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{www.dinhdat.com}}
   $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}} $|$ 
-  \href{https://www.linkedin.com/in/datvodinh/}{{linkedin.com/in/datvodinh/}}
+  \href{https://github.com/datvodinh/}{{github.com/datvodinh}}
   
 \end{center}
 %-----------SUMMARY-----------------
@@ -133,10 +133,11 @@
   
 \section{Technical Skills}
 \resumeItemListStart[leftmargin=*,label={}]
-  \resumeitem{\textbf{Programming Languages}: {Python, Java, C++, Javascript.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Deep Learning Frameworks}: {Pytorch, Lightning, OpenCV, Transformers, Unsloth, Ollama, LlamaIndex.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Backend and Cloud}: {MySQL, MongoDB, ChromaDB, FastAPI, Django, AzureML.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Developer Tools}: {Git/Github, Docker, Shell, Linux, Postman, Figma, Jira.}}\\[-\baselineskip]
+  \resumeitem{\textbf{Programming Languages}: {Python, SQL, Java, C++, Javascript.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Deep Learning}: {Pytorch, Lightning, OpenCV, Transformers, Unsloth, Ollama, LlamaIndex.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Deployment and MLOps}: {Docker, Gradio, WandB, AzureML, AWS.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Backend}: {MongoDB, Chroma, Pydantic, FastAPI.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Tools}: {Git/Github, Github Actions, Shell, Postman, Figma, Jira.}}\\[-\baselineskip]
 \resumeItemListEnd
 
 
@@ -145,26 +146,36 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Freelance}{Taiwan}
-      {AI and Quantitative Researcher}{Oct 2023 -- Jan 2024}
+      {Quantitative Researcher}{Oct 2023 -- Jan 2024}
       \resumeItemListStart
+        \resumeitem{\textbf{Technologies:} Pytorch, Lightning, WandB, Transformers, Polars, Amazon S3}
         \resumeitem{Design and improve the reward function for a reinforcement learning-based trading environment to mimic real-world trading scenarios.}
-        \resumeitem{Developing an agent with capable of navigating the volatility within the trading environment, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
+        \resumeitem{Developing an RL agent combine with current SOTA algorithms such as Transformers, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
       \resumeItemListEnd
       
 
     \resumeSubheading
-      {VIS Laboratory (Startup)}{Ha Noi, Viet Nam}
-      {Part Time AI Engineer}{May 2022 -- Jul 2023}
+      {VIS (Startup)}{Ha Noi, Viet Nam}
+      {Part Time AI Researcher}{May 2022 -- Jul 2023}
       \resumeItemListStart
-        \resumeitem{Researched and implemented reinforcement learning algorithms based on current SOTA such as PPO, Transformer, successfully surpass 95\% of the environments in the system by competing with other decision-making agents.}
-        \resumeitem{Developed 3 gym-based multiplayer environments  for the purpose of researching algorithms.}
-        \resumeitem{Research about Japanese stock market, ensure the credibility of sources and gather data by utilizing web crawling techniques.}
+        \resumeitem{\textbf{Technologies:} Pytorch, Numpy, Numba, Gynasium, Selenium.}
+        \resumeitem{Researched and implemented 2 deep reinforcement learning algorithms, successfully surpass 95\% of the environments in the system by competing with other decision-making agents.}
+        \resumeitem{Developed three gym-based multiplayer environments for researching algorithms, with optimization achieved using Numpy and Numba JIT, reaching the speed upto 1000 games per second.}
+        \resumeitem{Research about Japanese stock market, crawl data from 3 different sources: Minkabu, MarketWatch and YahooJP and cross-check to ensure the credibility of sources.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
+
+\resumeSubheadingNew
+    {Open-Sources Contributions}{Github}{2024}
+    \resumeItemListStart
+      \resumeitem{Ollama (60k stars): Add my Chatbot project to community integrations.}
+      \resumeitem{LlamaIndex (30k stars): Fix a bug in fusion retriever module.}
+      \resumeItemListEnd
+    
   
 \resumeSubheadingNew
     {LLM Finetuning}{Transformers, Unsloth, PEFT, Trl}{Apr 2024}
@@ -172,38 +183,35 @@
       \resumeitem{Finetune open sources LLM model such as Llama-3, Mistral to perform multiple task such as:}
       \resumeSubItemListStart
       \resumeitem{Function calling: enable LLM to use external functions and tools.}
-      \resumeitem{Instruction following: generate detail answers based on the given instruction.}
-      \resumeItemListEnd
-    \resumeSubItemListEnd
+      \resumeitem{Instruction tuned: generate detail answers based on the given instruction.}
+      \resumeitem{Structured output: LLM return structured output such as JSON, XML...}
+      \resumeSubItemListEnd
+    \resumeItemListEnd
+    
 
   \resumeSubheadingNew
-    {RAG Chatbot}{Ollama, LlamaIndex, ChromaDB, Gradio, Docker}{Mar 2024}
+    {RAG Chatbot}{Ollama, LlamaIndex, ChromaDB, Gradio, Docker, FastAPI, Ngrok}{Mar 2024}
     \resumeItemListStart
-      \resumeitem{Build a RAG (Retrieval Augmented Generation) Chatbot that can retrieve information from multiple documents based on user queries and providing precise answers.}
+      \resumeitem{Build a fully local Chatbot with advanced RAG pipeline that can retrieve information from multiple documents based on user queries and providing precise answers.}
       \resumeitem{Design a simple web interface so users can customize LLM models and input documents.}
+      \resumeitem{Create an HTTPS endpoint using Ngrok for sharing demo.}
+      \resumeitem{Implement Docker for streamlined deployment and management of the Chatbot system.}
       
     \resumeItemListEnd
-
+    
   \resumeSubheadingNew
-    {AI Experiment System}{Pytorch, Lightning, Gradio, FastAPI, MongoDB, Gradio}{Mar 2024}
+    {Stable Diffusion from scratch}{Pytorch, Lightning, WandB, Gradio}{Feb 2024}
     \resumeItemListStart
-      \resumeitem{A web interface enabling users to adjust hyperparameters for the deep learning task and initiate multiple jobs with a single click.}
-      \resumeitem{Real-time display of job progress, presentation of results from completed jobs, sortable by predefined metrics such as accuracy, F1 score and runtime for easy comparison.}
-    \resumeItemListEnd
-
-  \resumeSubheadingNew
-    {Stable Diffusion from Scratch}{Pytorch, Lightning, WandB, Gradio}{Feb 2024}
-    \resumeItemListStart
-      \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose, training and tracking experiment using Pytorch Lightning and Wandb.}
+      \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose, include full training and tracking experiment pipeline using Pytorch Lightning and Wandb.}
       \resumeitem{Build a simple website to visualize the inference of the diffusion model.}
     \resumeItemListEnd
 
-  \resumeSubheadingNew
-    {Personal Website}{Javascript, HTML, CSS, Jekyll}{Jun 2023 -- Now}
-    \resumeItemListStart
-      \resumeitem{My personal blog to share my knowledge about AI, Machine Learning, showing step by step approach the model and implemented it from scratch.}
-      \resumeitem{A landing page contain my contact information and my resume.}
-    \resumeItemListEnd
+  % \resumeSubheadingNew
+  %   {Personal Website}{Javascript, HTML, CSS, Jekyll}{Jun 2023 -- Now}
+  %   \resumeItemListStart
+  %     \resumeitem{My personal blog to share my knowledge about AI, Machine Learning, showing step by step approach the model and implemented it from scratch.}
+  %     \resumeitem{A landing page contain my contact information and my resume.}
+  %   \resumeItemListEnd
 
   
 
