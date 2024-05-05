@@ -33,7 +33,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\Large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -109,8 +109,8 @@
 
 \begin{flushleft}
   \textbf{\huge {Dat Vo Dinh}} \\ \vspace{4pt}
-  {{Hanoi, Vietnam}} $|$ \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{www.dinhdat.com}}
-  $|$ \href{https://github.com/datvodinh/}{{github.com/datvodinh}}
+  \hspace{6pt}{{Hanoi, Vietnam}} $|$ \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{www.dinhdat.com}}
+  $|$ \href{https://github.com/datvodinh/}{{github.com/datvodinh}} $|$ \href{www.linkedin.com/in/datvodinh}{{linkedin.com/in/datvodinh}}
   %  $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}}
 \end{flushleft}
 %-----------SUMMARY-----------------
@@ -147,7 +147,7 @@
       {Quantitative Researcher}{Oct 2023 -- Jan 2024}
       \resumeItemListStart
         \resumeitem{\textbf{Technologies:} Pytorch, Lightning, WandB, Transformers, Polars, Amazon S3}
-        \resumeitem{Design and improve the reward function for a reinforcement learning-based trading environment to mimic real-world trading scenarios.}
+        \resumeitem{Design and improve the reward function for the RL based trading environment to mimic real-world scenarios.}
         \resumeitem{Developing an RL agent combine with current SOTA algorithms such as Transformers, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
       \resumeItemListEnd
       
@@ -168,40 +168,39 @@
 \resumeSubHeadingListStart
 
 \resumeSubheadingNew
-    {Open-Sources Contributions}{Github}{2024}
+    {Open source contributions}{Github}{2024}
     \resumeItemListStart
-      \resumeitem{Ollama (60k stars): Add my Chatbot project to community integrations.}
+      \resumeitem{Ollama (60k stars): Add my Chatbot project to community integrations in the project's documents.}
       \resumeitem{LlamaIndex (30k stars): Fix a bug in fusion retriever module.}
       \resumeItemListEnd
     
   
 \resumeSubheadingNew
-    {LLM Finetuning}{Transformers, Unsloth, PEFT, Trl}{Apr 2024}
+    {LLM finetuning}{Transformers, Unsloth, PEFT, Trl}{Apr 2024}
     \resumeItemListStart
       \resumeitem{Finetune open sources LLM model such as Llama-3, Mistral to perform multiple task such as:}
-      \resumeSubItemListStart
-      \resumeitem{Function calling: enable LLM to use external functions and tools.}
-      \resumeitem{Instruction tuned: generate detail answers based on the given instruction.}
-      \resumeitem{Structured output: LLM return structured output such as JSON, XML...}
-      \resumeSubItemListEnd
+      \resumeitem{Function calling: enable LLM to use external functions and tools provided to solve complex problems.}
+      \resumeitem{Instruction tuned: helps the LLM follow instructions better to more reliably perform complex tasks and instructions.}
+      \resumeitem{Structured output: LLM return structured output such as JSON, XML...based on user's input.}
     \resumeItemListEnd
     
 
   \resumeSubheadingNew
-    {RAG Chatbot}{Ollama, LlamaIndex, ChromaDB, Gradio, Docker, FastAPI, Ngrok}{Mar 2024}
+    {RAG chatbot}{Ollama, LlamaIndex, ChromaDB, Gradio, Docker, FastAPI, Ngrok}{Mar 2024}
     \resumeItemListStart
-      \resumeitem{Build a fully local Chatbot with advanced RAG pipeline that can retrieve information from multiple documents based on user queries and providing precise answers.}
+      \resumeitem{Build a fully local Chatbot with advanced RAG pipeline to give precise answers base on multiple given documents.}
       \resumeitem{Pull and use any open sources model from Huggingface and Ollama with different quantization.}
-      \resumeitem{Design a simple web interface so users can customize LLM models and input documents.}
-      \resumeitem{Implement Docker for streamlined deployment and management of the Chatbot system.}
+      \resumeitem{Design a simple web interface so users can customize LLM models and input documents to use the chatbot.}
+      \resumeitem{Containerize all the chatbot system and service using Docker for deployment and management.}
       
     \resumeItemListEnd
     
   \resumeSubheadingNew
     {Stable Diffusion from scratch}{Pytorch, Lightning, WandB, Gradio}{Feb 2024}
     \resumeItemListStart
-      \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose, include full training and tracking experiment pipeline using Pytorch Lightning and Wandb.}
-      \resumeitem{Build a simple website to visualize the inference of the diffusion model.}
+      \resumeitem{Implemented Latent Diffusion Model (Stable Diffusion) from scratch for education purpose.}
+      \resumeitem{Implemented full training and tracking experiment pipeline, different sampling algorithms such as DDIM, PLMS...}
+      \resumeitem{Build a simple UI with Gradio to visualize the inference process of the model with different sampling methods.}
     \resumeItemListEnd
 
   % \resumeSubheadingNew
