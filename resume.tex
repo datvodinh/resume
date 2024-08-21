@@ -1,4 +1,12 @@
+%!TEX program = lualatex
+
 \documentclass[letterpaper,11pt]{article}
+
+\usepackage{fontspec}  % For custom fonts
+\setmainfont{Arial}
+
+% \usepackage{helvet}
+% \renewcommand{\familydefault}{\sfdefault}  % Set Helvetica (Arial-like) as default font
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -9,9 +17,10 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\setlength{\footskip}{4.08003pt}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+% \input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -24,7 +33,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1in}
 \urlstyle{same}
 
 \raggedbottom
@@ -36,8 +45,12 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
+% \titleformat{\section}{
+%   \vspace{-4pt}\raggedright\large
+% }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
@@ -49,6 +62,8 @@
 
 \newcommand{\resumeitem}[1]{
   \item \small{
+    % \setlength{\parsep}{2pt}
+    % \setlength{\itemsep}{\parsep}
     \hspace{1pt} #1 \vspace{-1pt}
   }
 }
@@ -64,8 +79,8 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{#2} \\
-      \textit{#3} & \textit{#4} \\
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -108,8 +123,8 @@
 % \end{tabular*}
 
 \begin{center}
-  \textbf{\huge {Dat Vo Dinh}} \\ \vspace{4pt}
-  \hspace{6pt}{{Hanoi, Vietnam}} $|$ \href{tel:+84399565203}{{+84--399--565--203}} $|$ \href{https://dinhdat.com}{{dinhdat.com}}
+  \textbf{\Huge {Dat Vo Dinh}} \\ \vspace{4pt}
+  \hspace{6pt}{{Hanoi, Vietnam}} $|$ \href{tel:+84399565203}{{+84-399-565-203}} $|$ \href{https://dinhdat.com}{{dinhdat.com}}
   $|$ \href{https://github.com/datvodinh/}{{github.com/datvodinh}} $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}}
 \end{center}
 % $|$ \href{https://linkedin.com/in/datvodinh}{{linkedin.com/in/datvodinh}}

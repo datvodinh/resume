@@ -1,5 +1,8 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{fontspec}  % For custom fonts
+\setmainfont{Arial}
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -11,7 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+% \input{glyphtounicode}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -37,7 +40,7 @@
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
