@@ -41,9 +41,9 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-% \titleformat{\section}{
-%   \vspace{-4pt}\scshape\raggedright\large
-% }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % \titleformat{\section}{
 %   \vspace{-4pt}\raggedright\large
@@ -60,15 +60,18 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-1pt}}
+    \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeitem}[1]{
   \item \small{
-    % \setlength{\parsep}{2pt}
-    % \setlength{\itemsep}{\parsep}
-    \hspace{1pt} #1 \vspace{-1pt}
+    \setlength{\parsep}{2pt}   % Space between paragraphs within an item
+    \setlength{\itemsep}{0pt}  % Space between items
+    \setlength{\topsep}{2pt}   % Space before the first item
+    \setlength{\partopsep}{0pt}% Extra space added to \topsep when environment starts a new paragraph
+    \setlength{\leftmargin}{0pt}
+    \hspace{-2pt} #1 \vspace{-2pt}
   }
 }
 
@@ -121,27 +124,18 @@
 
 \begin{center}
   \textbf{\Huge {Dat Vo Dinh}} \\ \vspace{4pt}
-  \hspace{6pt}{{Hanoi, Vietnam}} $|$ \href{tel:+84xxxxxxxxx}{{+84-xxx-xxx-xxx}} $|$ \href{https://dinhdat.com}{{dinhdat.com}}
+  \hspace{6pt}{{Hanoi, Vietnam}} $|$ \href{tel:+84xxxxxxxxx}{{+84-xxxxxxxxx}} $|$ \href{https://dinhdat.com}{{dinhdat.com}}
   $|$ \href{https://github.com/datvodinh/}{{github.com/datvodinh}} $|$ \href{mailto:vodinhdat03@gmail.com}{{vodinhdat03@gmail.com}}
 \end{center}
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Hanoi University of Science and Technology}{Aug 2021 -- Aug 2025 (Expected)}
-    {BSc in Data Science and Artificial Intelligience - GPA 3.2/4.0}{\textit{Hanoi, Vietnam}}
-\resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
   
 \section{Technical Skills}
-\resumeItemListStart[leftmargin=2pt,label={}]
+\resumeItemListStart[leftmargin=4pt,label={}]
   \resumeitem{\textbf{Programming Languages}: {Python, Javascript, Java, C++.}} \\[-\baselineskip]
   \resumeitem{\textbf{Deep Learning}: {Pytorch, Lightning, Ray, Ultralytics, Transformers, OpenCV, Spacy.}} \\[-\baselineskip]
-  \resumeitem{\textbf{MLOps and Deployment}: {MLFlow, Kubeflow, Kuberay, WandB, Dagster, AWS, Docker, Kubernetes, Helm, FluxCD.}} \\[-\baselineskip]
-  \resumeitem{\textbf{Fullstack Development}: {FastAPI, Jinja, Gradio, ReactJS, NextJS, TailwindCSS, HTML, CSS.}} \\[-\baselineskip]
+  \resumeitem{\textbf{MLOps and Deployment}: {MLFlow, Kuberay, WandB, Dagster, Docker, Kubernetes, Helm, FluxCD.}} \\[-\baselineskip]
+  \resumeitem{\textbf{Fullstack Development}: {FastAPI, Jinja, Gradio, NextJS, TailwindCSS, HTML, CSS.}} \\[-\baselineskip]
   \resumeitem{\textbf{Developer Tools}: {Git, Github Actions, Jenkins, Pydantic, Poetry, Ruff, Prettier.}} \\[-\baselineskip]
 \resumeItemListEnd
 
@@ -152,7 +146,7 @@
       {AI Engineer}{Apr 2024 -- Aug 2024}
       {Contracting}{Australia}
       \resumeItemListStart
-        \resumeitem{\textbf{Technologies:} Pytorch, Transformers, Ray, Dagster, Qdrant, FastAPI, Docker, Kubernetes, Kuberay, FluxCD.}
+        \resumeitem{\textbf{Technologies:} {Pytorch, Transformers, Ray, Dagster, Qdrant, FastAPI, Docker, Kubernetes, Kuberay, FluxCD.}}
         \resumeitem{Build a distributed and scalable data pipeline and orchestration using Dagster, capable of ingesting thousands of documents, images, and videos concurrently from S3 storage.}
         \resumeitem{Develop and serve a robust and autoscale model orchestration with Ray Serve and Kuberay on Kubernetes cluster, enabling seamless inference across multiple models to process data.}
         \resumeitem{Design and implement a vector retrieval search engine and GUI with FastAPI and Gradio, enhancing data retrieval with hybrid search and integrating visualization tools to display search results.}
@@ -163,7 +157,7 @@
       {Quantitative Researcher}{Sep 2023 -- Jan 2024}
       {Contracting}{Taiwan}
       \resumeItemListStart
-        \resumeitem{\textbf{Technologies:} Pytorch, Lightning, WandB, Transformers, Polars, Amazon S3}
+        \resumeitem{\textbf{Technologies:} {Pytorch, Lightning, WandB, Transformers, Polars, Amazon S3}}
         \resumeitem{Design and improve the reward function for the RL based trading environment to mimic real-world scenarios.}
         \resumeitem{Developing an RL agent combine with current SOTA algorithms such as Transformers, surpass the performance of traditional ensemble models such as XGBoost, Gradient Boosting,... through backtest evaluation.}
       \resumeItemListEnd
@@ -172,7 +166,7 @@
       {Part Time AI Researcher}{May 2022 -- Jul 2023}
       {VIS Startup}{Hanoi, Vietnam}
       \resumeItemListStart
-        \resumeitem{\textbf{Technologies:} Pytorch, Numpy, Numba, Gynasium, Selenium.}
+        \resumeitem{\textbf{Technologies:} {Pytorch, Numpy, Numba, Gynasium, Selenium.}}
         \resumeitem{Research and implement 2 deep reinforcement learning algorithms, successfully surpass 95\% of the environments in the system by competing with other decision-making agents.}
         \resumeitem{Develop three gym-based multiplayer environments for researching algorithms, with optimization achieved using Numpy and Numba JIT, reaching the speed upto 1000 games per second.}
         \resumeitem{Research about Japanese stock market, crawl data from 3 different sources: Minkabu, MarketWatch and YahooJP and cross-check to ensure the credibility of sources.}
@@ -181,13 +175,21 @@
 
 %-----------PROJECTS-----------------
 \section{Personal Projects}
-\resumeItemListStart[leftmargin=2pt,label={}]
+\resumeItemListStart[leftmargin=4pt,label={}]
   \resumeitem{\textbf{Open Source contributions}: {Fix bug and contribute integration to Ollama (85k stars) and LlamaIndex (35k stars).}} \\[-\baselineskip]
   \resumeitem{\textbf{RAG Chatbot}: {Build and serve a chatbot application with advanced RAG pipeline and fully local LLM models.}} \\[-\baselineskip]
   \resumeitem{\textbf{Personal Website}: {A landing page with personal information and personal technical blog about AI/Deep Learning.}} \\[-\baselineskip]
   \resumeitem{\textbf{Stable Diffusion from scratch}: {Implemented Latent Diffusion Model from scratch for education purpose.}} \\[-\baselineskip]
   \resumeitem{\textbf{LLM finetuning}: {Finetune open sources LLM to perform downstream tasks such as function calling, summarizaiton...}} \\[-\baselineskip]
 \resumeItemListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Hanoi University of Science and Technology}{Aug 2021 -- Aug 2025 (Expected)}
+    {BSc in Data Science and Artificial Intelligience - GPA 3.2/4.0}{\textit{Hanoi, Vietnam}}
+\resumeSubHeadingListEnd
 
 \end{document}
 
